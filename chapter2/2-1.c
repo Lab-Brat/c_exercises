@@ -20,14 +20,27 @@ int lim;
 {
     int c, i;
 
-    for (i=0; i<lim-1 && (c=getchar())!=EOF && c!='\n'; ++i) 
+    /* for (i=0; i<lim-1 && (c=getchar())!=EOF && c!='\n'; ++i) 
         s[i] = c;
-    /* for (i = 0; (c=getchar())!=EOF; i++) {
+
+    if (c == '\n') {
+        s[i] = c;
+        ++i;
+    } */
+
+    for (i = 0; (c=getchar())!=EOF; i++) {
         if (i>lim-1)
             break;
         if (c!='\n')
             s[i] = c;
-    } */
+        else
+            break;
+    }
+    
+    if (c == '\n') {
+        s[i] = c;
+        ++i;
+    }
 
     /* i = 0;
     while ((c=getchar()) != EOF) {
@@ -38,12 +51,9 @@ int lim;
         
         if (c!='\n')
             s[i] = c;
+        else
+            break;
     } */
-
-    if (c == '\n') {
-        s[i] = c;
-        ++i;
-    }
     
     s[i] = '\0';
     return(i);
