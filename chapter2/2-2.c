@@ -1,3 +1,8 @@
+/* 
+Exercise 2-2. Write the function htoi(s), 
+which converts a string of hexadecimal digits into its equivalent integer value. 
+The allowable digits are 0 through 9, a through f, and A through F. 
+*/
 #include <stdio.h>
 #include <string.h>
 
@@ -6,8 +11,11 @@
 main() {
     int i;
     char c;
-    char string[MAXSIZE] = "18A9";
-    printf("%d\n", htoi(string));
+    char string_bin[MAXSIZE] = "255";
+    char string_hex[MAXSIZE] = "18A9";
+
+    printf("%d\n", atoi(string_bin));
+    printf("%d\n", htoi(string_hex));
 }
 
 atoi(s) /* convert s to integer */

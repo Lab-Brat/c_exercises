@@ -1,3 +1,4 @@
+/* Exercise 2-1. Write a loop equivalent to the for loop above without using &&. */
 #include <stdio.h>
 
 #define MAXLINE 1000 
